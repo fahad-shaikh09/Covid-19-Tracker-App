@@ -7,7 +7,7 @@ import {fetchData} from "./api"
 
 function App() {
   let [data,setData] = useState({});
-  // let {confirmed,recovered} = 
+
   useEffect( () => {
     async function getData() {
       let newData = await fetchData();
@@ -16,19 +16,17 @@ function App() {
       console.log("Data from API", newData)
       } 
       getData();
-
-    }
-      ,[]
+      },[]
     )
 
+let {confirmed,deaths,recovered,lastUpdate} = data;
   return (
     <div className="App">
       <h1>Covid-19 Tracker App</h1>
-      <Cards />
+      <Cards confirmed={confirmed} deaths={deaths} recovered={recovered} lastUpdate={lastUpdate} />
+      <br />
       <CountryPicker />
       <Charts />
-      {/* <h1>Confirmed: {confirmed} </h1> */}
-      {/* <h1>Recovered: {recovered} </h1> */}
 
     </div>
   );
