@@ -11,7 +11,7 @@ const Cards = ({confirmed,deaths,recovered,lastUpdate}) => {
   
   // console.log("Props from Cards: Confirmed", confirmed)
   // console.log("Props from Cards: Deaths", deaths)
-  console.log("date is: ", lastUpdate)
+  // console.log("date is: ", lastUpdate)
 if (!confirmed) {
   return "Loading..."
 }
