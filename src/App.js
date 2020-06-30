@@ -32,7 +32,7 @@ function App() {
     let handleCountryChange = async (name) => {
       const data = await fetchData(name);
       //  console.log("country in handleCountryChange fn: ", name)
-      console.log("handleCountryChange of 1 country:", data)
+      // console.log("handleCountryChange of 1 country:", data)
       setData(data);
       setCountry(name);
 
@@ -48,7 +48,7 @@ let {countries} = data;
       <Cards data={data} confirmed={confirmed} deaths={deaths} recovered={recovered} lastUpdate={lastUpdate} />
       <br />
       <CountryPicker handleCountryChange={handleCountryChange}/>
-      <Charts  country={country}/>
+      <Charts  data={data} country={country}/>
 
     </div>
   );
