@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './App.module.css';
+// import styles from './App.module.css';
 import Cards from './components/Cards/Cards';
 import CountryPicker from './components/CountryPicker/CountryPicker';
 import Charts from './components/Charts/Charts';
@@ -41,7 +41,7 @@ function App() {
    
 
 let {confirmed,deaths,recovered,lastUpdate} = data;
-let {countries} = data;
+// let {countries} = data;
   return (
     <div className="App">
       <h1>Covid-19 Tracker App</h1>
