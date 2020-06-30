@@ -23,6 +23,7 @@ useEffect(() => {
 
     setEveryday(dailyDatafromApiComp);
     everyday.push(dailyDatafromApiComp);
+    console.log("Everyday: ", everyday)
     // everyday[0].map(item => console.log(item.confirmed.total))
 
     // countries = await fetchCountries();
@@ -33,6 +34,7 @@ useEffect(() => {
     // console.log("State: Country: ", country)
   }
     fetchApi();
+    //eslint-disable-next-line
   },[]);
 
   // let [confirmed] = everyday.map(item=>item.confirmed.total)
